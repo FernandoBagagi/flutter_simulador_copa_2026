@@ -1,0 +1,340 @@
+{
+    "selecoes": [
+        {
+            "trigrama": "can",
+            "codigo_pais": "ca",
+            "pt_BR": "Canadá",
+            "en": "Canada",
+            "es": "Canadá"
+        },
+        {
+            "trigrama": "usa",
+            "codigo_pais": "us",
+            "pt_BR": "Estados Unidos",
+            "en": "United States",
+            "es": "Estados Unidos"
+        },
+        {
+            "trigrama": "mex",
+            "codigo_pais": "mx",
+            "pt_BR": "México",
+            "en": "Mexico",
+            "es": "México"
+        },
+        {
+            "trigrama": "ksa",
+            "codigo_pais": "sa",
+            "pt_BR": "Arábia Saudita",
+            "en": "Saudi Arabia",
+            "es": "Arabia Saudita"
+        },
+        {
+            "trigrama": "aus",
+            "codigo_pais": "au",
+            "pt_BR": "Austrália",
+            "en": "Australia",
+            "es": "Australia"
+        },
+        {
+            "trigrama": "qat",
+            "codigo_pais": "qa",
+            "pt_BR": "Catar",
+            "en": "Qatar",
+            "es": "Catar"
+        },
+        {
+            "trigrama": "kor",
+            "codigo_pais": "kr",
+            "pt_BR": "Coreia do Sul",
+            "en": "South Korea",
+            "es": "Corea del Sur"
+        },
+        {
+            "trigrama": "irn",
+            "codigo_pais": "ir",
+            "pt_BR": "Irã",
+            "en": "Iran",
+            "es": "Irán"
+        },
+        {
+            "trigrama": "irq",
+            "codigo_pais": "iq",
+            "pt_BR": "Iraque",
+            "en": "Iraq",
+            "es": "Irak"
+        },
+        {
+            "trigrama": "jpn",
+            "codigo_pais": "jp",
+            "pt_BR": "Japão",
+            "en": "Japan",
+            "es": "Japón"
+        },
+        {
+            "trigrama": "jor",
+            "codigo_pais": "jo",
+            "pt_BR": "Jordânia",
+            "en": "Jordan",
+            "es": "Jordania"
+        },
+        {
+            "trigrama": "uzb",
+            "codigo_pais": "uz",
+            "pt_BR": "Uzbequistão",
+            "en": "Uzbekistan",
+            "es": "Uzbekistán"
+        },
+        {
+            "trigrama": "rsa",
+            "codigo_pais": "za",
+            "pt_BR": "África do Sul",
+            "en": "South Africa",
+            "es": "Sudáfrica"
+        },
+        {
+            "trigrama": "alg",
+            "codigo_pais": "dz",
+            "pt_BR": "Argélia",
+            "en": "Algeria",
+            "es": "Argelia"
+        },
+        {
+            "trigrama": "cpv",
+            "codigo_pais": "cv",
+            "pt_BR": "Cabo Verde",
+            "en": "Cape Verde",
+            "es": "Cabo Verde"
+        },
+        {
+            "trigrama": "civ",
+            "codigo_pais": "ci",
+            "pt_BR": "Costa do Marfim",
+            "en": "Ivory Coast",
+            "es": "Costa de Marfil"
+        },
+        {
+            "trigrama": "egy",
+            "codigo_pais": "eg",
+            "pt_BR": "Egito",
+            "en": "Egypt",
+            "es": "Egipto"
+        },
+        {
+            "trigrama": "gha",
+            "codigo_pais": "gh",
+            "pt_BR": "Gana",
+            "en": "Ghana",
+            "es": "Ghana"
+        },
+        {
+            "trigrama": "mar",
+            "codigo_pais": "ma",
+            "pt_BR": "Marrocos",
+            "en": "Morocco",
+            "es": "Marruecos"
+        },
+        {
+            "trigrama": "cod",
+            "codigo_pais": "cd",
+            "pt_BR": "RD Congo",
+            "en": "DR Congo",
+            "es": "RD Congo"
+        },
+        {
+            "trigrama": "sen",
+            "codigo_pais": "sn",
+            "pt_BR": "Senegal",
+            "en": "Senegal",
+            "es": "Senegal"
+        },
+        {
+            "trigrama": "tun",
+            "codigo_pais": "tn",
+            "pt_BR": "Tunísia",
+            "en": "Tunisia",
+            "es": "Túnez"
+        },
+        {
+            "trigrama": "arg",
+            "codigo_pais": "ar",
+            "pt_BR": "Argentina",
+            "en": "Argentina",
+            "es": "Argentina"
+        },
+        {
+            "trigrama": "bra",
+            "codigo_pais": "br",
+            "pt_BR": "Brasil",
+            "en": "Brazil",
+            "es": "Brasil"
+        },
+        {
+            "trigrama": "col",
+            "codigo_pais": "co",
+            "pt_BR": "Colômbia",
+            "en": "Colombia",
+            "es": "Colombia"
+        },
+        {
+            "trigrama": "ecu",
+            "codigo_pais": "ec",
+            "pt_BR": "Equador",
+            "en": "Ecuador",
+            "es": "Ecuador"
+        },
+        {
+            "trigrama": "par",
+            "codigo_pais": "py",
+            "pt_BR": "Paraguai",
+            "en": "Paraguay",
+            "es": "Paraguay"
+        },
+        {
+            "trigrama": "uru",
+            "codigo_pais": "uy",
+            "pt_BR": "Uruguai",
+            "en": "Uruguay",
+            "es": "Uruguay"
+        },
+        {
+            "trigrama": "nzl",
+            "codigo_pais": "nz",
+            "pt_BR": "Nova Zelândia",
+            "en": "New Zealand",
+            "es": "Nueva Zelanda"
+        },
+        {
+            "trigrama": "ger",
+            "codigo_pais": "de",
+            "pt_BR": "Alemanha",
+            "en": "Germany",
+            "es": "Alemania"
+        },
+        {
+            "trigrama": "aut",
+            "codigo_pais": "at",
+            "pt_BR": "Áustria",
+            "en": "Austria",
+            "es": "Austria"
+        },
+        {
+            "trigrama": "bel",
+            "codigo_pais": "be",
+            "pt_BR": "Bélgica",
+            "en": "Belgium",
+            "es": "Bélgica"
+        },
+        {
+            "trigrama": "bih",
+            "codigo_pais": "ba",
+            "pt_BR": "Bósnia e Herzegovina",
+            "en": "Bosnia and Herzegovina",
+            "es": "Bosnia y Herzegovina"
+        },
+        {
+            "trigrama": "cro",
+            "codigo_pais": "hr",
+            "pt_BR": "Croácia",
+            "en": "Croatia",
+            "es": "Croacia"
+        },
+        {
+            "trigrama": "sco",
+            "codigo_pais": "sc",
+            "pt_BR": "Escócia",
+            "en": "Scotland",
+            "es": "Escocia"
+        },
+        {
+            "trigrama": "esp",
+            "codigo_pais": "es",
+            "pt_BR": "Espanha",
+            "en": "Spain",
+            "es": "España"
+        },
+        {
+            "trigrama": "fra",
+            "codigo_pais": "fr",
+            "pt_BR": "França",
+            "en": "France",
+            "es": "Francia"
+        },
+        {
+            "trigrama": "ned",
+            "codigo_pais": "nl",
+            "pt_BR": "Holanda",
+            "en": "Netherlands",
+            "es": "Países Bajos"
+        },
+        {
+            "trigrama": "eng",
+            "codigo_pais": "en",
+            "pt_BR": "Inglaterra",
+            "en": "England",
+            "es": "Inglaterra"
+        },
+        {
+            "trigrama": "nor",
+            "codigo_pais": "no",
+            "pt_BR": "Noruega",
+            "en": "Norway",
+            "es": "Noruega"
+        },
+        {
+            "trigrama": "por",
+            "codigo_pais": "pt",
+            "pt_BR": "Portugal",
+            "en": "Portugal",
+            "es": "Portugal"
+        },
+        {
+            "trigrama": "cze",
+            "codigo_pais": "cz",
+            "pt_BR": "República Tcheca",
+            "en": "Czech Republic",
+            "es": "República Checa"
+        },
+        {
+            "trigrama": "swe",
+            "codigo_pais": "se",
+            "pt_BR": "Suécia",
+            "en": "Sweden",
+            "es": "Suecia"
+        },
+        {
+            "trigrama": "sui",
+            "codigo_pais": "ch",
+            "pt_BR": "Suíça",
+            "en": "Switzerland",
+            "es": "Suiza"
+        },
+        {
+            "trigrama": "tur",
+            "codigo_pais": "tr",
+            "pt_BR": "Turquia",
+            "en": "Turkey",
+            "es": "Turquía"
+        },
+        {
+            "trigrama": "cuw",
+            "codigo_pais": "cw",
+            "pt_BR": "Curaçao",
+            "en": "Curaçao",
+            "es": "Curazao"
+        },
+        {
+            "trigrama": "hai",
+            "codigo_pais": "ht",
+            "pt_BR": "Haiti",
+            "en": "Haiti",
+            "es": "Haití"
+        },
+        {
+            "trigrama": "pan",
+            "codigo_pais": "pa",
+            "pt_BR": "Panamá",
+            "en": "Panama",
+            "es": "Panamá"
+        }
+    ]
+}
