@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_simulador_copa_2026/home_screen.dart';
+import 'package:flutter_simulador_copa_2026/views/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
