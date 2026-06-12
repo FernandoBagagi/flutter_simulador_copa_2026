@@ -75,7 +75,7 @@ class _SelecoesScreenState extends State<SelecoesScreen> {
         return Padding(
           padding: const EdgeInsets.symmetric(vertical: 6),
           child: ListTile(
-            leading: _buildFlag(selecao.pathBandeira, width: 45, height: 30),
+            leading: _buildFlag(selecao.pathBandeira, width: 60, height: 45),
             title: Text(
               selecao.nome,
               style: const TextStyle(fontWeight: FontWeight.w600),
@@ -95,7 +95,7 @@ class _SelecoesScreenState extends State<SelecoesScreen> {
 
   Widget _buildDesktopGrid(double width) {
     // Calcula dinamicamente quantas colunas cabem na janela atual
-    int crossAxisCount = (width / 180).floor();
+    int crossAxisCount = (width / 220).floor();
     if (crossAxisCount < 2) crossAxisCount = 2;
 
     return GridView.builder(
@@ -118,7 +118,7 @@ class _SelecoesScreenState extends State<SelecoesScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                _buildFlag(selecao.pathBandeira, width: 70, height: 45),
+                _buildFlag(selecao.pathBandeira, width: 145, height: 100),
                 const SizedBox(height: 12),
                 Text(
                   selecao.nome,
