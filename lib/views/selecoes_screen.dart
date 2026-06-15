@@ -18,8 +18,16 @@ class _SelecoesScreenState extends State<SelecoesScreen> {
   void initState() {
     super.initState();
     _scrollController = ScrollController();
-    _viewModel = getIt<SelecoesViewModel>();
+    _viewModel = getIt<SelecoesViewModel>(param1: _mostrarMensagemErro);
     _viewModel.carregarSelecoes();
+  }
+
+  void _mostrarMensagemErro() {
+    ScaffoldMessenger //
+        .of(context)
+        .showSnackBar(
+          const SnackBar(content: Text('Erro ao carregar seleções!')),
+        );
   }
 
   @override

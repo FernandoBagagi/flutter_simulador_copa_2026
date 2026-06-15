@@ -7,7 +7,17 @@ final getIt = GetIt.instance;
 void setupInjecaoDependencias() {
   // SelecoesViewModel
   getIt.registerLazySingleton<SelecaoRepository>(() => SelecaoRepository());
-  getIt.registerFactory<SelecoesViewModel>(
-    () => SelecoesViewModel(getIt<SelecaoRepository>()),
+  getIt.registerFactoryParam<SelecoesViewModel, void Function()?, void>(
+    _factoryFuncSelecoesViewModel,
+  );
+}
+
+SelecoesViewModel _factoryFuncSelecoesViewModel(
+  void Function()? param1,
+  void param2,
+) {
+  return SelecoesViewModel(
+    getIt<SelecaoRepository>(),
+    mostrarMensagemErro: param1,
   );
 }
