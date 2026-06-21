@@ -18,7 +18,7 @@ class Partida {
   factory Partida.fromJson(Map<String, dynamic> json) {
     return Partida(
       numero: json['numero'] as int,
-      dataHora: json['dataHora'] as DateTime,
+      dataHora: DateTime.parse(json['dataHora'] as String),
       local: json['local'] as String,
       selecao1: DadosSelecaoPartida.fromJson(
         json['selecao1'] as Map<String, dynamic>,
