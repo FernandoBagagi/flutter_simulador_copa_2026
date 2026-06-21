@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_simulador_copa_2026/views/partidas_screen.dart';
 import 'package:flutter_simulador_copa_2026/views/selecoes_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -20,6 +21,7 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
+        spacing: 16,
         children: [
           FilledButton.icon(
             onPressed: () {
@@ -30,7 +32,19 @@ class HomeScreen extends StatelessWidget {
             icon: const Icon(Icons.list),
             label: const Padding(
               padding: EdgeInsets.all(12.0),
-              child: Text('Ver Seleções Classificadas'),
+              child: Text('Seleções'),
+            ),
+          ),
+          FilledButton.icon(
+            onPressed: () {
+              Navigator.of(
+                context,
+              ).push(MaterialPageRoute(builder: (_) => const PartidasScreen()));
+            },
+            icon: const Icon(Icons.sports_soccer),
+            label: const Padding(
+              padding: EdgeInsets.all(12.0),
+              child: Text('Partidas'),
             ),
           ),
         ],
