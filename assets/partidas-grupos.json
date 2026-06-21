@@ -1,0 +1,1084 @@
+{
+    "partidas": [
+        {
+            "numero": 1,
+            "dataHora": "2026-06-11T16:00:00-03:00",
+            "local": "Cidade do México, no México",
+            "selecao1": {
+                "trigrama": "MEX",
+                "golsMarcados": 2,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "RSA",
+                "golsMarcados": 0,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 2,
+            "dataHora": "2026-06-11T23:00:00-03:00",
+            "local": "Guadalajara",
+            "selecao1": {
+                "trigrama": "KOR",
+                "golsMarcados": 2,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "CZE",
+                "golsMarcados": 1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 3,
+            "dataHora": "2026-06-12T16:00:00-03:00",
+            "local": "Toronto, no Canadá",
+            "selecao1": {
+                "trigrama": "CAN",
+                "golsMarcados": 1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "BIH",
+                "golsMarcados": 1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 4,
+            "dataHora": "2026-06-12T22:00:00-03:00",
+            "local": "Los Angeles, nos EUA",
+            "selecao1": {
+                "trigrama": "USA",
+                "golsMarcados": 4,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "PAR",
+                "golsMarcados": 1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 5,
+            "dataHora": "2026-06-13T16:00:00-03:00",
+            "local": "Santa Clara, nos EUA",
+            "selecao1": {
+                "trigrama": "QAT",
+                "golsMarcados": 1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "SUI",
+                "golsMarcados": 1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 6,
+            "dataHora": "2026-06-13T19:00:00-03:00",
+            "local": "Nova York/Nova Jersey, nos EUA",
+            "selecao1": {
+                "trigrama": "BRA",
+                "golsMarcados": 1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "MAR",
+                "golsMarcados": 1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 7,
+            "dataHora": "2026-06-13T22:00:00-03:00",
+            "local": "Boston, nos EUA",
+            "selecao1": {
+                "trigrama": "HAI",
+                "golsMarcados": 0,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "SCO",
+                "golsMarcados": 1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 8,
+            "dataHora": "2026-06-14T01:00:00-03:00",
+            "local": "Vancouver, no Canadá",
+            "selecao1": {
+                "trigrama": "AUS",
+                "golsMarcados": 2,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "TUR",
+                "golsMarcados": 0,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 9,
+            "dataHora": "2026-06-14T14:00:00-03:00",
+            "local": "Houston, nos EUA",
+            "selecao1": {
+                "trigrama": "GER",
+                "golsMarcados": 7,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "CUW",
+                "golsMarcados": 1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 10,
+            "dataHora": "2026-06-14T17:00:00-03:00",
+            "local": "Dallas, nos EUA",
+            "selecao1": {
+                "trigrama": "NED",
+                "golsMarcados": 2,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "JPN",
+                "golsMarcados": 2,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 11,
+            "dataHora": "2026-06-14T20:00:00-03:00",
+            "local": "Filadélfia, nos EUA",
+            "selecao1": {
+                "trigrama": "CIV",
+                "golsMarcados": 1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "ECU",
+                "golsMarcados": 0,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 12,
+            "dataHora": "2026-06-14T23:00:00-03:00",
+            "local": "Monterrey, no México",
+            "selecao1": {
+                "trigrama": "SWE",
+                "golsMarcados": 5,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "TUN",
+                "golsMarcados": 1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 13,
+            "dataHora": "2026-06-15T13:00:00-03:00",
+            "local": "Atlanta, nos EUA",
+            "selecao1": {
+                "trigrama": "ESP",
+                "golsMarcados": 0,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "CPV",
+                "golsMarcados": 0,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 14,
+            "dataHora": "2026-06-15T16:00:00-03:00",
+            "local": "Seattle, nos EUA",
+            "selecao1": {
+                "trigrama": "BEL",
+                "golsMarcados": 1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "EGY",
+                "golsMarcados": 1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 15,
+            "dataHora": "2026-06-15T19:00:00-03:00",
+            "local": "Miami, nos EUA",
+            "selecao1": {
+                "trigrama": "KSA",
+                "golsMarcados": 1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "URU",
+                "golsMarcados": 1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 16,
+            "dataHora": "2026-06-15T22:00:00-03:00",
+            "local": "Los Angeles, nos EUA",
+            "selecao1": {
+                "trigrama": "IRN",
+                "golsMarcados": 2,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "NZL",
+                "golsMarcados": 2,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 17,
+            "dataHora": "2026-06-16T16:00:00-03:00",
+            "local": "Nova York/Nova Jersey, nos EUA",
+            "selecao1": {
+                "trigrama": "FRA",
+                "golsMarcados": 3,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "SEN",
+                "golsMarcados": 1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 18,
+            "dataHora": "2026-06-16T19:00:00-03:00",
+            "local": "Boston, nos EUA",
+            "selecao1": {
+                "trigrama": "IRQ",
+                "golsMarcados": 1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "NOR",
+                "golsMarcados": 4,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 19,
+            "dataHora": "2026-06-16T22:00:00-03:00",
+            "local": "Kansas City, nos EUA",
+            "selecao1": {
+                "trigrama": "ARG",
+                "golsMarcados": 3,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "ALG",
+                "golsMarcados": 0,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 20,
+            "dataHora": "2026-06-17T01:00:00-03:00",
+            "local": "Santa Clara, nos EUA",
+            "selecao1": {
+                "trigrama": "AUT",
+                "golsMarcados": 3,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "JOR",
+                "golsMarcados": 1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 21,
+            "dataHora": "2026-06-17T14:00:00-03:00",
+            "local": "Houston, nos EUA",
+            "selecao1": {
+                "trigrama": "POR",
+                "golsMarcados": 1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "COD",
+                "golsMarcados": 1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 22,
+            "dataHora": "2026-06-17T17:00:00-03:00",
+            "local": "Dallas, nos EUA",
+            "selecao1": {
+                "trigrama": "ENG",
+                "golsMarcados": 4,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "CRO",
+                "golsMarcados": 2,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 23,
+            "dataHora": "2026-06-17T20:00:00-03:00",
+            "local": "Toronto, no Canadá",
+            "selecao1": {
+                "trigrama": "GHA",
+                "golsMarcados": 1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "PAN",
+                "golsMarcados": 0,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 24,
+            "dataHora": "2026-06-17T23:00:00-03:00",
+            "local": "Cidade do México, no México",
+            "selecao1": {
+                "trigrama": "UZB",
+                "golsMarcados": 1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "COL",
+                "golsMarcados": 3,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 25,
+            "dataHora": "2026-06-18T13:00:00-03:00",
+            "local": "Atlanta, nos EUA",
+            "selecao1": {
+                "trigrama": "CZE",
+                "golsMarcados": 1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "RSA",
+                "golsMarcados": 1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 26,
+            "dataHora": "2026-06-18T16:00:00-03:00",
+            "local": "Los Angeles, nos EUA",
+            "selecao1": {
+                "trigrama": "SUI",
+                "golsMarcados": 4,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "BIH",
+                "golsMarcados": 1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 27,
+            "dataHora": "2026-06-18T19:00:00-03:00",
+            "local": "Vancouver, no Canadá",
+            "selecao1": {
+                "trigrama": "CAN",
+                "golsMarcados": 6,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "QAT",
+                "golsMarcados": 0,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 28,
+            "dataHora": "2026-06-18T22:00:00-03:00",
+            "local": "Guadalajara, no México",
+            "selecao1": {
+                "trigrama": "MEX",
+                "golsMarcados": 1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "KOR",
+                "golsMarcados": 0,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 29,
+            "dataHora": "2026-06-19T16:00:00-03:00",
+            "local": "Seattle, nos EUA",
+            "selecao1": {
+                "trigrama": "USA",
+                "golsMarcados": 2,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "AUS",
+                "golsMarcados": 0,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 30,
+            "dataHora": "2026-06-19T19:00:00-03:00",
+            "local": "Boston, nos EUA",
+            "selecao1": {
+                "trigrama": "SCO",
+                "golsMarcados": 0,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "MAR",
+                "golsMarcados": 1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 31,
+            "dataHora": "2026-06-19T21:30:00-03:00",
+            "local": "Filadélfia, nos EUA",
+            "selecao1": {
+                "trigrama": "BRA",
+                "golsMarcados": 3,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "HAI",
+                "golsMarcados": 0,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 32,
+            "dataHora": "2026-06-20T00:00:00-03:00",
+            "local": "Santa Clara, nos EUA",
+            "selecao1": {
+                "trigrama": "TUR",
+                "golsMarcados": 0,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "PAR",
+                "golsMarcados": 1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 33,
+            "dataHora": "2026-06-20T14:00:00-03:00",
+            "local": "Houston, nos EUA",
+            "selecao1": {
+                "trigrama": "NED",
+                "golsMarcados": 5,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "SWE",
+                "golsMarcados": 1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 34,
+            "dataHora": "2026-06-20T17:00:00-03:00",
+            "local": "Toronto, no Canadá",
+            "selecao1": {
+                "trigrama": "GER",
+                "golsMarcados": 2,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "CIV",
+                "golsMarcados": 1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 35,
+            "dataHora": "2026-06-20T21:00:00-03:00",
+            "local": "Kansas City, nos EUA",
+            "selecao1": {
+                "trigrama": "ECU",
+                "golsMarcados": 0,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "CUW",
+                "golsMarcados": 0,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 36,
+            "dataHora": "2026-06-21T01:00:00-03:00",
+            "local": "Monterrey, no México",
+            "selecao1": {
+                "trigrama": "TUN",
+                "golsMarcados": 0,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "JPN",
+                "golsMarcados": 4,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 37,
+            "dataHora": "2026-06-21T13:00:00-03:00",
+            "local": "Atlanta, nos EUA",
+            "selecao1": {
+                "trigrama": "ESP",
+                "golsMarcados": -1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "KSA",
+                "golsMarcados": -1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 38,
+            "dataHora": "2026-06-21T16:00:00-03:00",
+            "local": "Los Angeles, nos EUA",
+            "selecao1": {
+                "trigrama": "BEL",
+                "golsMarcados": -1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "IRN",
+                "golsMarcados": -1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 39,
+            "dataHora": "2026-06-21T19:00:00-03:00",
+            "local": "Miami, nos EUA",
+            "selecao1": {
+                "trigrama": "URU",
+                "golsMarcados": -1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "CPV",
+                "golsMarcados": -1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 40,
+            "dataHora": "2026-06-21T22:00:00-03:00",
+            "local": "Vancouver, no Canadá",
+            "selecao1": {
+                "trigrama": "NZL",
+                "golsMarcados": -1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "EGY",
+                "golsMarcados": -1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 41,
+            "dataHora": "2026-06-22T14:00:00-03:00",
+            "local": "Dallas, nos EUA",
+            "selecao1": {
+                "trigrama": "ARG",
+                "golsMarcados": -1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "AUT",
+                "golsMarcados": -1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 42,
+            "dataHora": "2026-06-22T18:00:00-03:00",
+            "local": "Filadélfia, nos EUA",
+            "selecao1": {
+                "trigrama": "FRA",
+                "golsMarcados": -1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "IRQ",
+                "golsMarcados": -1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 43,
+            "dataHora": "2026-06-22T21:00:00-03:00",
+            "local": "Nova York/Nova Jersey, nos EUA",
+            "selecao1": {
+                "trigrama": "NOR",
+                "golsMarcados": -1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "SEN",
+                "golsMarcados": -1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 44,
+            "dataHora": "2026-06-23T00:00:00-03:00",
+            "local": "Santa Clara, nos EUA",
+            "selecao1": {
+                "trigrama": "JOR",
+                "golsMarcados": -1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "ALG",
+                "golsMarcados": -1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 45,
+            "dataHora": "2026-06-23T14:00:00-03:00",
+            "local": "Houston, nos EUA",
+            "selecao1": {
+                "trigrama": "POR",
+                "golsMarcados": -1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "UZB",
+                "golsMarcados": -1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 46,
+            "dataHora": "2026-06-23T17:00:00-03:00",
+            "local": "Boston, nos EUA",
+            "selecao1": {
+                "trigrama": "ENG",
+                "golsMarcados": -1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "GHA",
+                "golsMarcados": -1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 47,
+            "dataHora": "2026-06-23T20:00:00-03:00",
+            "local": "Toronto, no Canadá",
+            "selecao1": {
+                "trigrama": "PAN",
+                "golsMarcados": -1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "CRO",
+                "golsMarcados": -1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 48,
+            "dataHora": "2026-06-23T23:00:00-03:00",
+            "local": "Guadalajara, no México",
+            "selecao1": {
+                "trigrama": "COL",
+                "golsMarcados": -1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "COD",
+                "golsMarcados": -1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 49,
+            "dataHora": "2026-06-24T16:00:00-03:00",
+            "local": "Vancouver, no Canadá",
+            "selecao1": {
+                "trigrama": "SUI",
+                "golsMarcados": -1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "CAN",
+                "golsMarcados": -1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 50,
+            "dataHora": "2026-06-24T16:00:00-03:00",
+            "local": "Seattle, nos EUA",
+            "selecao1": {
+                "trigrama": "BIH",
+                "golsMarcados": -1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "QAT",
+                "golsMarcados": -1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 51,
+            "dataHora": "2026-06-24T19:00:00-03:00",
+            "local": "Atlanta, nos EUA",
+            "selecao1": {
+                "trigrama": "MAR",
+                "golsMarcados": -1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "HAI",
+                "golsMarcados": -1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 52,
+            "dataHora": "2026-06-24T19:00:00-03:00",
+            "local": "Miami, nos EUA",
+            "selecao1": {
+                "trigrama": "SCO",
+                "golsMarcados": -1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "BRA",
+                "golsMarcados": -1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 53,
+            "dataHora": "2026-06-24T22:00:00-03:00",
+            "local": "Monterrey, no México",
+            "selecao1": {
+                "trigrama": "RSA",
+                "golsMarcados": -1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "KOR",
+                "golsMarcados": -1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 54,
+            "dataHora": "2026-06-24T22:00:00-03:00",
+            "local": "Cidade do México, no México",
+            "selecao1": {
+                "trigrama": "CZE",
+                "golsMarcados": -1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "MEX",
+                "golsMarcados": -1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 55,
+            "dataHora": "2026-06-25T17:00:00-03:00",
+            "local": "Nova York/Nova Jersey, nos EUA",
+            "selecao1": {
+                "trigrama": "ECU",
+                "golsMarcados": -1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "GER",
+                "golsMarcados": -1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 56,
+            "dataHora": "2026-06-25T17:00:00-03:00",
+            "local": "Filadélfia, nos EUA",
+            "selecao1": {
+                "trigrama": "CUW",
+                "golsMarcados": -1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "CIV",
+                "golsMarcados": -1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 57,
+            "dataHora": "2026-06-25T20:00:00-03:00",
+            "local": "Dallas, nos EUA",
+            "selecao1": {
+                "trigrama": "JPN",
+                "golsMarcados": -1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "SWE",
+                "golsMarcados": -1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 58,
+            "dataHora": "2026-06-25T20:00:00-03:00",
+            "local": "Kansas City, nos EUA",
+            "selecao1": {
+                "trigrama": "TUN",
+                "golsMarcados": -1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "NED",
+                "golsMarcados": -1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 59,
+            "dataHora": "2026-06-25T23:00:00-03:00",
+            "local": "Los Angeles, nos EUA",
+            "selecao1": {
+                "trigrama": "TUR",
+                "golsMarcados": -1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "USA",
+                "golsMarcados": -1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 60,
+            "dataHora": "2026-06-25T23:00:00-03:00",
+            "local": "Santa Clara, nos EUA",
+            "selecao1": {
+                "trigrama": "PAR",
+                "golsMarcados": -1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "AUS",
+                "golsMarcados": -1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 61,
+            "dataHora": "2026-06-26T16:00:00-03:00",
+            "local": "Boston, nos EUA",
+            "selecao1": {
+                "trigrama": "NOR",
+                "golsMarcados": -1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "FRA",
+                "golsMarcados": -1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 62,
+            "dataHora": "2026-06-26T16:00:00-03:00",
+            "local": "Toronto, no Canadá",
+            "selecao1": {
+                "trigrama": "SEN",
+                "golsMarcados": -1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "IRQ",
+                "golsMarcados": -1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 63,
+            "dataHora": "2026-06-26T21:00:00-03:00",
+            "local": "Houston, nos EUA",
+            "selecao1": {
+                "trigrama": "CPV",
+                "golsMarcados": -1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "KSA",
+                "golsMarcados": -1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 64,
+            "dataHora": "2026-06-26T21:00:00-03:00",
+            "local": "Guadalajara, no México",
+            "selecao1": {
+                "trigrama": "URU",
+                "golsMarcados": -1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "ESP",
+                "golsMarcados": -1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 65,
+            "dataHora": "2026-06-27T00:00:00-03:00",
+            "local": "Seattle, nos EUA",
+            "selecao1": {
+                "trigrama": "EGY",
+                "golsMarcados": -1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "IRN",
+                "golsMarcados": -1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 66,
+            "dataHora": "2026-06-27T00:00:00-03:00",
+            "local": "Vancouver, no Canadá",
+            "selecao1": {
+                "trigrama": "NZL",
+                "golsMarcados": -1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "BEL",
+                "golsMarcados": -1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 67,
+            "dataHora": "2026-06-27T18:00:00-03:00",
+            "local": "Nova York/Nova Jersey, nos EUA",
+            "selecao1": {
+                "trigrama": "PAN",
+                "golsMarcados": -1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "ENG",
+                "golsMarcados": -1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 68,
+            "dataHora": "2026-06-27T18:00:00-03:00",
+            "local": "Filadélfia, nos EUA",
+            "selecao1": {
+                "trigrama": "CRO",
+                "golsMarcados": -1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "GHA",
+                "golsMarcados": -1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 69,
+            "dataHora": "2026-06-27T20:30:00-03:00",
+            "local": "Miami, nos EUA",
+            "selecao1": {
+                "trigrama": "COL",
+                "golsMarcados": -1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "POR",
+                "golsMarcados": -1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 70,
+            "dataHora": "2026-06-27T20:30:00-03:00",
+            "local": "Atlanta, nos EUA",
+            "selecao1": {
+                "trigrama": "COD",
+                "golsMarcados": -1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "UZB",
+                "golsMarcados": -1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 71,
+            "dataHora": "2026-06-27T23:00:00-03:00",
+            "local": "Kansas City, nos EUA",
+            "selecao1": {
+                "trigrama": "ALG",
+                "golsMarcados": -1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "AUT",
+                "golsMarcados": -1,
+                "cartoes": {}
+            }
+        },
+        {
+            "numero": 72,
+            "dataHora": "2026-06-28T23:00:00-03:00",
+            "local": "Dallas, nos EUA",
+            "selecao1": {
+                "trigrama": "JOR",
+                "golsMarcados": -1,
+                "cartoes": {}
+            },
+            "selecao2": {
+                "trigrama": "ARG",
+                "golsMarcados": -1,
+                "cartoes": {}
+            }
+        }
+    ]
+}
