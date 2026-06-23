@@ -12,21 +12,13 @@ class PartidasScreen extends StatefulWidget {
 }
 
 class _PartidasScreenState extends State<PartidasScreen> {
-  late final ScrollController _scrollController;
   late final PartidasViewModel _viewModel;
 
   @override
   void initState() {
     super.initState();
-    _scrollController = ScrollController();
     _viewModel = getIt<PartidasViewModel>();
     _viewModel.carregarPartidas();
-  }
-
-  @override
-  void dispose() {
-    _scrollController.dispose();
-    super.dispose();
   }
 
   @override
@@ -35,56 +27,51 @@ class _PartidasScreenState extends State<PartidasScreen> {
       appBar: AppBar(title: Text('Partidas')),
       body: ListenableBuilder(
         listenable: _viewModel,
-        builder: (context, child) {
-          switch (_viewModel.status) {
-            case PartidasViewModelStatus.erro:
-              return const Center(child: Text('Erro ao carregar partida'));
-            case PartidasViewModelStatus.carregando:
-              return const Center(child: CircularProgressIndicator());
-            case PartidasViewModelStatus.carregou:
-              return Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    PartidaWidget(
-                      contoller: PartidaWidgetContoller(
-                        partida: _viewModel.partidaAtual,
-                        selecao1: _viewModel.getSelecao(_viewModel.partidaAtual.selecao1.trigrama),
-                        selecao2: _viewModel.getSelecao(_viewModel.partidaAtual.selecao2.trigrama),
-                      ),
-                    ),
+        builder: _bodyListenableBuilder,
+      ),
+    );
+  }
 
-                    const Spacer(),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        SizedBox(
-                          height: 50,
-                          child: ElevatedButton(
-                            onPressed: _viewModel.hasPartidaAnterior()
-                                ? _viewModel.partidaAnterior
-                                : null,
-                            child: const Text('Partida Anterior'),
-                          ),
-                        ),
-                        SizedBox(
-                          height: 50,
-                          child: ElevatedButton(
-                            onPressed: _viewModel.hasProximaPartida()
-                                ? _viewModel.proximaPartida
-                                : null,
-                            child: const Text('Próxima Partida'),
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 16),
-                  ],
-                ),
-              );
-          }
-        },
+  Widget _bodyListenableBuilder(BuildContext context, Widget? child) {
+    switch (_viewModel.status) {
+      case PartidasViewModelStatus.erro:
+        return const Center(child: Text('Erro ao carregar partida'));
+      case PartidasViewModelStatus.carregando:
+        return const Center(child: CircularProgressIndicator());
+      case PartidasViewModelStatus.carregou:
+        return _bodyPartidasCarregadas();
+    }
+  }
+
+  Widget _bodyPartidasCarregadas() {
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          ListView.builder(
+            itemBuilder: _listPartidaWidgetBuilder,
+            itemCount: _viewModel.partidas.length,
+          ),
+          ElevatedButton(
+            onPressed: () {
+              _viewModel.gerarProximaRodada();
+            },
+            child: const Text('Gerar próxima rodada'),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _listPartidaWidgetBuilder(BuildContext context, int index) {
+    final partida = _viewModel.partidas.elementAt(index);
+    return PartidaWidget(
+      contoller: PartidaWidgetContoller(
+        partida: partida,
+        selecao1: _viewModel.getSelecao(partida.selecao1.trigrama),
+        selecao2: _viewModel.getSelecao(partida.selecao2.trigrama),
       ),
     );
   }
