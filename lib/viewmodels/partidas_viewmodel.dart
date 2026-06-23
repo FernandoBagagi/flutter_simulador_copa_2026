@@ -17,10 +17,7 @@ class PartidasViewModel extends ChangeNotifier {
 
   final _selecoes = <Selecao>[];
   final _partidas = <Partida>[];
-  int _numeroPartidaAtual = 1;
-  Partida get partidaAtual {
-    return _partidas.elementAt(_numeroPartidaAtual - 1);
-  }
+  List<Partida> get partidas => _partidas;
 
   Selecao getSelecao(String trigrama) {
     return _selecoes.firstWhere(
@@ -31,28 +28,6 @@ class PartidasViewModel extends ChangeNotifier {
         throw Exception('Seleção não encontrada');
       },
     );
-  }
-
-  bool hasProximaPartida() {
-    return (_numeroPartidaAtual + 1) <= _partidas.length;
-  }
-
-  void proximaPartida() {
-    if (hasProximaPartida()) {
-      _numeroPartidaAtual++;
-      notifyListeners();
-    }
-  }
-
-  bool hasPartidaAnterior() {
-    return (_numeroPartidaAtual - 1) > 0;
-  }
-
-  void partidaAnterior() {
-    if (hasPartidaAnterior()) {
-      _numeroPartidaAtual--;
-      notifyListeners();
-    }
   }
 
   Future<void> carregarPartidas() async {
@@ -69,6 +44,11 @@ class PartidasViewModel extends ChangeNotifier {
     } finally {
       notifyListeners();
     }
+  }
+
+  List<Partida> gerarProximaRodada() {
+    // TODO: fazer chaveamento 16 avos
+    throw UnimplementedError();
   }
 
 }
