@@ -48,11 +48,13 @@ class _PartidasScreenState extends State<PartidasScreen> {
       padding: const EdgeInsets.all(16.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisSize: MainAxisSize.max,
+        spacing: 8,
         children: [
-          ListView.builder(
-            itemBuilder: _listPartidaWidgetBuilder,
-            itemCount: _viewModel.partidas.length,
+          Expanded(
+            child: ListView.builder(
+              itemBuilder: _listPartidaWidgetBuilder,
+              itemCount: _viewModel.partidas.length,
+            ),
           ),
           ElevatedButton(
             onPressed: () {
