@@ -546,12 +546,12 @@
             "local": "Atlanta, nos EUA",
             "selecao1": {
                 "trigrama": "ESP",
-                "golsMarcados": -1,
+                "golsMarcados": 4,
                 "cartoes": {}
             },
             "selecao2": {
                 "trigrama": "KSA",
-                "golsMarcados": -1,
+                "golsMarcados": 0,
                 "cartoes": {}
             }
         },
@@ -561,12 +561,12 @@
             "local": "Los Angeles, nos EUA",
             "selecao1": {
                 "trigrama": "BEL",
-                "golsMarcados": -1,
+                "golsMarcados": 0,
                 "cartoes": {}
             },
             "selecao2": {
                 "trigrama": "IRN",
-                "golsMarcados": -1,
+                "golsMarcados": 0,
                 "cartoes": {}
             }
         },
@@ -576,12 +576,12 @@
             "local": "Miami, nos EUA",
             "selecao1": {
                 "trigrama": "URU",
-                "golsMarcados": -1,
+                "golsMarcados": 2,
                 "cartoes": {}
             },
             "selecao2": {
                 "trigrama": "CPV",
-                "golsMarcados": -1,
+                "golsMarcados": 2,
                 "cartoes": {}
             }
         },
@@ -591,12 +591,12 @@
             "local": "Vancouver, no Canadá",
             "selecao1": {
                 "trigrama": "NZL",
-                "golsMarcados": -1,
+                "golsMarcados": 1,
                 "cartoes": {}
             },
             "selecao2": {
                 "trigrama": "EGY",
-                "golsMarcados": -1,
+                "golsMarcados": 3,
                 "cartoes": {}
             }
         },
@@ -606,12 +606,12 @@
             "local": "Dallas, nos EUA",
             "selecao1": {
                 "trigrama": "ARG",
-                "golsMarcados": -1,
+                "golsMarcados": 2,
                 "cartoes": {}
             },
             "selecao2": {
                 "trigrama": "AUT",
-                "golsMarcados": -1,
+                "golsMarcados": 0,
                 "cartoes": {}
             }
         },
@@ -621,12 +621,12 @@
             "local": "Filadélfia, nos EUA",
             "selecao1": {
                 "trigrama": "FRA",
-                "golsMarcados": -1,
+                "golsMarcados": 3,
                 "cartoes": {}
             },
             "selecao2": {
                 "trigrama": "IRQ",
-                "golsMarcados": -1,
+                "golsMarcados": 0,
                 "cartoes": {}
             }
         },
@@ -636,12 +636,12 @@
             "local": "Nova York/Nova Jersey, nos EUA",
             "selecao1": {
                 "trigrama": "NOR",
-                "golsMarcados": -1,
+                "golsMarcados": 3,
                 "cartoes": {}
             },
             "selecao2": {
                 "trigrama": "SEN",
-                "golsMarcados": -1,
+                "golsMarcados": 2,
                 "cartoes": {}
             }
         },
@@ -651,12 +651,12 @@
             "local": "Santa Clara, nos EUA",
             "selecao1": {
                 "trigrama": "JOR",
-                "golsMarcados": -1,
+                "golsMarcados": 1,
                 "cartoes": {}
             },
             "selecao2": {
                 "trigrama": "ALG",
-                "golsMarcados": -1,
+                "golsMarcados": 2,
                 "cartoes": {}
             }
         },
@@ -666,12 +666,12 @@
             "local": "Houston, nos EUA",
             "selecao1": {
                 "trigrama": "POR",
-                "golsMarcados": -1,
+                "golsMarcados": 5,
                 "cartoes": {}
             },
             "selecao2": {
                 "trigrama": "UZB",
-                "golsMarcados": -1,
+                "golsMarcados": 0,
                 "cartoes": {}
             }
         },
@@ -681,12 +681,12 @@
             "local": "Boston, nos EUA",
             "selecao1": {
                 "trigrama": "ENG",
-                "golsMarcados": -1,
+                "golsMarcados": 0,
                 "cartoes": {}
             },
             "selecao2": {
                 "trigrama": "GHA",
-                "golsMarcados": -1,
+                "golsMarcados": 0,
                 "cartoes": {}
             }
         },
@@ -696,12 +696,12 @@
             "local": "Toronto, no Canadá",
             "selecao1": {
                 "trigrama": "PAN",
-                "golsMarcados": -1,
+                "golsMarcados": 0,
                 "cartoes": {}
             },
             "selecao2": {
                 "trigrama": "CRO",
-                "golsMarcados": -1,
+                "golsMarcados": 1,
                 "cartoes": {}
             }
         },
@@ -711,12 +711,12 @@
             "local": "Guadalajara, no México",
             "selecao1": {
                 "trigrama": "COL",
-                "golsMarcados": -1,
+                "golsMarcados": 1,
                 "cartoes": {}
             },
             "selecao2": {
                 "trigrama": "COD",
-                "golsMarcados": -1,
+                "golsMarcados": 0,
                 "cartoes": {}
             }
         },
