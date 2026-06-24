@@ -1,0 +1,17 @@
+j74 1E 3ABCDF
+j77 1I 3CDFGH
+j73 2A 2B
+j75 1F 2C
+J83 2K 2L
+j84 1H 2J
+j81 1D 3BEFIJ
+j82 1G 3AEHIJ
+j76 1C 2F
+j78 2E 2I
+j79 1A 3CEFHI
+j80 1L 3EHIJK
+j86 1J 2H
+j88 2D 2G
+j85 1B 3EFGIJ
+j87 1K 3DEIJL
+Fonte: https://www.tournamentsoccer.us/fantasy-soccer-world-cup/2026/matches/bracket
