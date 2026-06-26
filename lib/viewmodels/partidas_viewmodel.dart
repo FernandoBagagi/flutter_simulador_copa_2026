@@ -3,14 +3,20 @@ import 'package:flutter_simulador_copa_2026/models/partida.dart';
 import 'package:flutter_simulador_copa_2026/models/selecao.dart';
 import 'package:flutter_simulador_copa_2026/repositories/partida_repository.dart';
 import 'package:flutter_simulador_copa_2026/repositories/selecao_repository.dart';
+import 'package:flutter_simulador_copa_2026/services/eliminatorias_service.dart';
 
 enum PartidasViewModelStatus { carregou, carregando, erro }
 
 class PartidasViewModel extends ChangeNotifier {
   final SelecaoRepository _selecaoRepository;
   final PartidaRepository _partidaRepository;
+  final EliminatoriasService _eliminatoriasService;
 
-  PartidasViewModel(this._selecaoRepository, this._partidaRepository);
+  PartidasViewModel(
+    this._selecaoRepository,
+    this._partidaRepository, {
+    EliminatoriasService? eliminatoriasService,
+  }) : _eliminatoriasService = eliminatoriasService ?? EliminatoriasService();
 
   PartidasViewModelStatus _status = PartidasViewModelStatus.carregando;
   PartidasViewModelStatus get status => _status;
@@ -47,8 +53,6 @@ class PartidasViewModel extends ChangeNotifier {
   }
 
   List<Partida> gerarProximaRodada() {
-    // TODO: fazer chaveamento 16 avos
-    throw UnimplementedError();
+    return _eliminatoriasService.gerarPartidas16Avos(partidas);
   }
-
 }
