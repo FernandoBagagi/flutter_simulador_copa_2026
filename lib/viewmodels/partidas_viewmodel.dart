@@ -52,7 +52,15 @@ class PartidasViewModel extends ChangeNotifier {
     }
   }
 
-  Future<List<Partida>> gerarProximaRodada() async {
-    return await _eliminatoriasService.gerarPartidas16Avos(partidas);
+  Future<void> gerarProximaRodada() async {
+    _status = PartidasViewModelStatus.carregando;
+    notifyListeners();
+
+
+    final partidas16Avos = await _eliminatoriasService.gerarPartidas16Avos(partidas);
+    _partidas.clear();
+    _partidas.addAll(partidas16Avos);
+    _status = PartidasViewModelStatus.carregou;
+    notifyListeners();
   }
 }
