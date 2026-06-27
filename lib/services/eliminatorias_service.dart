@@ -3,6 +3,21 @@ import 'package:flutter_simulador_copa_2026/services/selecao_tabela_grupo.dart';
 import 'package:flutter_simulador_copa_2026/services/tabela_grupo.dart';
 
 class EliminatoriasService {
+  static final grupos = {
+    'A': ['MEX', 'RSA', 'KOR', 'CZE'],
+    'B': ['SUI', 'CAN', 'BIH', 'QAT'],
+    'C': ['BRA', 'MAR', 'SCO', 'HAI'],
+    'D': ['USA', 'AUS', 'PAR', 'TUR'],
+    'E': ['GER', 'CIV', 'ECU', 'CUW'],
+    'F': ['NED', 'JPN', 'SWE', 'TUN'],
+    'G': ['EGY', 'IRN', 'BEL', 'NZL'],
+    'H': ['ESP', 'URU', 'CPV', 'KSA'],
+    'I': ['FRA', 'NOR', 'SEN', 'IRQ'],
+    'J': ['ARG', 'AUT', 'ALG', 'JOR'],
+    'K': ['COL', 'POR', 'COD', 'UZB'],
+    'L': ['ENG', 'GHA', 'CRO', 'PAN'],
+  };
+
   List<Partida> gerarPartidas16Avos(List<Partida> partidasGrupos) {
     final selecoesTabela = <String, SelecaoTabelaGrupo>{};
 
@@ -59,21 +74,6 @@ class EliminatoriasService {
       'L': TabelaGrupo('L'),
     };
 
-    final grupos = {
-      'A': ['MEX', 'RSA', 'KOR', 'CZE'],
-      'B': ['SUI', 'CAN', 'BIH', 'QAT'],
-      'C': ['BRA', 'MAR', 'SCO', 'HAI'],
-      'D': ['USA', 'AUS', 'PAR', 'TUR'],
-      'E': ['GER', 'CIV', 'ECU', 'CUW'],
-      'F': ['NED', 'JPN', 'SWE', 'TUN'],
-      'G': ['EGY', 'IRN', 'BEL', 'NZL'],
-      'H': ['ESP', 'URU', 'CPV', 'KSA'],
-      'I': ['FRA', 'NOR', 'SEN', 'IRQ'],
-      'J': ['ARG', 'AUT', 'ALG', 'JOR'],
-      'K': ['COL', 'POR', 'COD', 'UZB'],
-      'L': ['ENG', 'GHA', 'CRO', 'PAN'],
-    };
-
     for (final grupo in grupos.entries) {
       final tabelaGrupo = tabelasGrupo[grupo.key]!;
       for (final trigrama in grupo.value) {
@@ -91,7 +91,7 @@ class EliminatoriasService {
 
     tabelasGrupo.values.forEach(print);
 
-    final terceirosLugares = [];
+    final terceirosLugares = getListaTerceiros(tabelaTerceiroLugar);
 
     final a = tabelasGrupo['A']!;
     final b = tabelasGrupo['B']!;
@@ -142,5 +142,51 @@ class EliminatoriasService {
     ];
 
     return [];
+  }
+
+  List<SelecaoTabelaGrupo> getListaTerceiros(TabelaGrupo tabelaTerceiroLugar) {
+    final mapGrupoSelecao = gerarMapGrupoSelecao(tabelaTerceiroLugar);
+    final chave = gerarChaveTerceirosPossiveis(mapGrupoSelecao);
+    return getListaFromCombinacao(mapGrupoSelecao, chave);
+  }
+
+  Map<String, SelecaoTabelaGrupo> gerarMapGrupoSelecao(
+    TabelaGrupo tabelaTerceiroLugar,
+  ) {
+    final mapGrupoSelecao = <String, SelecaoTabelaGrupo>{};
+
+    for (final selecao in tabelaTerceiroLugar.oitoMelhores) {
+      final letraGrupo = getGrupoFrom(selecao);
+      mapGrupoSelecao[letraGrupo] = selecao;
+    }
+    return mapGrupoSelecao;
+  }
+
+  String getGrupoFrom(SelecaoTabelaGrupo selecao) {
+    for (final grupo in grupos.entries) {
+      for (final trigrama in grupo.value) {
+        if (trigrama == selecao.trigrama) {
+          return grupo.key;
+        }
+      }
+    }
+
+    throw Exception('Grupo não encontrado');
+  }
+
+  String gerarChaveTerceirosPossiveis(
+    Map<String, SelecaoTabelaGrupo> mapGrupoSelecao,
+  ) {
+    final letrasGrupoTerceiro = mapGrupoSelecao.keys.toList();
+    letrasGrupoTerceiro.sort();
+    return letrasGrupoTerceiro.reduce((s1, s2) => s1 + s2);
+  }
+
+  List<SelecaoTabelaGrupo> getListaFromCombinacao(
+    Map<String, SelecaoTabelaGrupo> map,
+    String chave,
+  ) {
+    //TODO: Combinações do terceiros possíveis
+    throw UnimplementedError();
   }
 }
