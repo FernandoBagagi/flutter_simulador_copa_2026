@@ -1,18 +1,19 @@
 import 'package:flutter_simulador_copa_2026/models/partida.dart';
+import 'package:flutter_simulador_copa_2026/services/selecao_tabela_grupo.dart';
+import 'package:flutter_simulador_copa_2026/services/tabela_grupo.dart';
 
 class EliminatoriasService {
-  final _selecoesTabela = <String, SelecaoTabelaGrupo>{};
 
   List<Partida> gerarPartidas16Avos(List<Partida> partidasGrupos) {
-    _selecoesTabela.clear();
-
+    final selecoesTabela = <String, SelecaoTabelaGrupo>{};
+    
     for (Partida partida in partidasGrupos) {
-      final selecao1 = _selecoesTabela.putIfAbsent(
+      final selecao1 = selecoesTabela.putIfAbsent(
         partida.selecao1.trigrama,
         () => SelecaoTabelaGrupo(partida.selecao1.trigrama),
       );
 
-      final selecao2 = _selecoesTabela.putIfAbsent(
+      final selecao2 = selecoesTabela.putIfAbsent(
         partida.selecao2.trigrama,
         () => SelecaoTabelaGrupo(partida.selecao2.trigrama),
       );
@@ -60,29 +61,26 @@ class EliminatoriasService {
     };
 
     final grupos = {
-      'A': ['mex', 'rsa', 'kor', 'cze'],
-      'B': ['sui', 'can', 'bih', 'qat'],
-      'C': ['bra', 'mar', 'sco', 'hai'],
-      'D': ['usa', 'aus', 'par', 'tur'],
-      'E': ['ger', 'civ', 'ecu', 'cuw'],
-      'F': ['ned', 'jpn', 'swe', 'tun'],
-      'G': ['egy', 'irn', 'bel', 'nzl'],
-      'H': ['esp', 'uru', 'cpv', 'ksa'],
-      'I': ['fra', 'nor', 'sen', 'irq'],
-      'J': ['arg', 'aut', 'alg', 'jor'],
-      'K': ['col', 'por', 'cod', 'uzb'],
-      'L': ['eng', 'gha', 'cro', 'pan'],
+      'A': ['MEX', 'RSA', 'KOR', 'CZE'],
+      'B': ['SUI', 'CAN', 'BIH', 'QAT'],
+      'C': ['BRA', 'MAR', 'SCO', 'HAI'],
+      'D': ['USA', 'AUS', 'PAR', 'TUR'],
+      'E': ['GER', 'CIV', 'ECU', 'CUW'],
+      'F': ['NED', 'JPN', 'SWE', 'TUN'],
+      'G': ['EGY', 'IRN', 'BEL', 'NZL'],
+      'H': ['ESP', 'URU', 'CPV', 'KSA'],
+      'I': ['FRA', 'NOR', 'SEN', 'IRQ'],
+      'J': ['ARG', 'AUT', 'ALG', 'JOR'],
+      'K': ['COL', 'POR', 'COD', 'UZB'],
+      'L': ['ENG', 'GHA', 'CRO', 'PAN'],
     };
 
     for (final grupo in grupos.entries) {
+      final tabelaGrupo = tabelasGrupo[grupo.key]!;
       for (final trigrama in grupo.value) {
-        tabelasGrupo[grupo.key]!.addSelecao(
-          _selecoesTabela[trigrama.toUpperCase()]!,
-        );
+        tabelaGrupo.addSelecao(selecoesTabela[trigrama]!);
       }
     }
-
-    tabelasGrupo.values.forEach(print);
 
     final tabelaTerceiroLugar = TabelaGrupo('Terceiro lugar');
 
@@ -90,157 +88,10 @@ class EliminatoriasService {
       tabelaTerceiroLugar.addSelecao(tabela.terceiro);
     }
 
-    print(tabelaTerceiroLugar);
-    
+    tabelasGrupo['Terceiro lugar'] = tabelaTerceiroLugar;
+
+    tabelasGrupo.values.forEach(print);
+
     return [];
-  }
-}
-
-class SelecaoTabelaGrupo implements Comparable<SelecaoTabelaGrupo> {
-  static final _pontosVitoria = 3;
-  static final _pontosEmpate = 1;
-  static final _pontosDerrota = 0;
-
-  final String trigrama;
-  int _partidasDisputadas; // J
-  int _vitorias; // C
-  int _empates; // E
-  int _derrotas; // D
-  int _golsMarcados; // M
-  int _golsSofridos; // S
-
-  SelecaoTabelaGrupo(this.trigrama)
-    : _partidasDisputadas = 0,
-      _vitorias = 0,
-      _empates = 0,
-      _derrotas = 0,
-      _golsMarcados = 0,
-      _golsSofridos = 0;
-
-  int get partidasDisputadas => _partidasDisputadas;
-  void addPartidaDisputada() {
-    _partidasDisputadas++;
-  }
-
-  int get vitorias => _vitorias;
-  void addVitoria() {
-    _vitorias++;
-  }
-
-  int get empates => _empates;
-  void addEmpate() {
-    _empates++;
-  }
-
-  int get derrotas => _derrotas;
-  void addDerrota() {
-    _derrotas++;
-  }
-
-  int get golsMarcados => _golsMarcados;
-  void addGolsMarcados(int gols) {
-    _golsMarcados += gols;
-  }
-
-  int get golsSofridos => _golsSofridos;
-  void addGolsSofridos(int gols) {
-    _golsSofridos += gols;
-  }
-
-  int get saldoGols => _golsMarcados - _golsSofridos;
-
-  int get pontos {
-    return vitorias * _pontosVitoria +
-        empates * _pontosEmpate +
-        derrotas * _pontosDerrota;
-  }
-
-  int get fairPlay {
-    //TODO:
-    throw UnimplementedError();
-  }
-
-  int get rankFifa {
-    //TODO:
-    throw UnimplementedError();
-  }
-
-  // Fonte: https://ge.globo.com/futebol/copa-do-mundo/noticia/2026/06/24/criterios-de-desempate-na-copa-do-mundo-entenda-as-regras-para-a-ultima-rodada-da-fase-de-grupos.ghtml
-  @override
-  int compareTo(SelecaoTabelaGrupo other) {
-    if (pontos != other.pontos) {
-      return other.pontos.compareTo(pontos);
-    }
-    if (saldoGols != other.saldoGols) {
-      return other.saldoGols.compareTo(saldoGols);
-    }
-    if (golsMarcados != other.golsMarcados) {
-      return other.golsMarcados.compareTo(golsMarcados);
-    }
-    if (fairPlay != other.fairPlay) {
-      //TODO: Verificar se não é o contrário
-      return fairPlay.compareTo(other.fairPlay);
-    }
-    return rankFifa.compareTo(other.rankFifa);
-  }
-}
-
-class TabelaGrupo {
-  final String letra;
-  final List<SelecaoTabelaGrupo> _selecoes;
-
-  TabelaGrupo(this.letra) : _selecoes = [];
-
-  void addSelecao(SelecaoTabelaGrupo selecao) {
-    _selecoes.add(selecao);
-    _selecoes.sort();
-  }
-
-  SelecaoTabelaGrupo get terceiro => _selecoes.elementAt(2);
-
-  @override
-  String toString() {
-    final buffer = StringBuffer();
-    buffer.writeln('Grupo ${letra.toUpperCase()}');
-    buffer.writeln('Equipe  Pts  V  E  D  GM  GS  SG');
-
-    for (int i = 0; i < _selecoes.length; i++) {
-      final selecao = _selecoes.elementAt(i);
-      if (i + 1 < 10) {
-        buffer.write(' ');
-      }
-      buffer.write(i + 1);
-      buffer.write(' ');
-      buffer.write(selecao.trigrama);
-      buffer.write('   ');
-      buffer.write(selecao.pontos);
-      buffer.write('   ');
-      buffer.write(selecao.vitorias);
-      buffer.write('  ');
-      buffer.write(selecao.empates);
-      buffer.write('  ');
-      buffer.write(selecao.derrotas);
-      buffer.write('  ');
-      if (selecao.golsMarcados < 10) {
-        buffer.write(' ');
-      }
-      buffer.write(selecao.golsMarcados);
-      buffer.write('  ');
-      if (selecao.golsSofridos < 10) {
-        buffer.write(' ');
-      }
-      buffer.write(selecao.golsSofridos);
-      buffer.write(' ');
-      if (selecao.saldoGols >= 10) {
-        buffer.write(' ');
-      } else if (selecao.saldoGols >= 0) {
-        buffer.write('  ');
-      } else if (selecao.saldoGols > -10) {
-        buffer.write(' ');
-      }
-      buffer.writeln(selecao.saldoGols);
-    }
-
-    return buffer.toString();
   }
 }
