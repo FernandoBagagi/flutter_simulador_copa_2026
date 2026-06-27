@@ -1,4 +1,5 @@
 import 'package:flutter_simulador_copa_2026/models/cartoes_selecao_partida.dart';
+import 'package:flutter_simulador_copa_2026/services/selecao_tabela_grupo.dart';
 
 class DadosSelecaoPartida {
   final String trigrama;
@@ -17,6 +18,19 @@ class DadosSelecaoPartida {
       golsMarcados: json['golsMarcados'] as int,
       cartoes: CartoesSelecaoPartida.fromJson(
         json['cartoes'] as Map<String, dynamic>,
+      ),
+    );
+  }
+
+  factory DadosSelecaoPartida.fromSelecao(SelecaoTabelaGrupo selecao) {
+    return DadosSelecaoPartida(
+      trigrama: selecao.trigrama,
+      golsMarcados: -1,
+      cartoes: CartoesSelecaoPartida(
+        amarelo: 0,
+        vermelhoIndireto: 0,
+        vermelhoDireto: 0,
+        amareloVermelhoDireto: 0,
       ),
     );
   }

@@ -1,3 +1,4 @@
+import 'package:flutter_simulador_copa_2026/models/dados_selecao_partida.dart';
 import 'package:flutter_simulador_copa_2026/models/partida.dart';
 import 'package:flutter_simulador_copa_2026/repositories/combinacoes_melhores_terceiros_repository.dart';
 import 'package:flutter_simulador_copa_2026/services/selecao_tabela_grupo.dart';
@@ -23,7 +24,9 @@ class EliminatoriasService {
 
   EliminatoriasService(this.combinacoesRepository);
 
-  Future<List<Partida>> gerarPartidas16Avos(List<Partida> partidasGrupos) async {
+  Future<List<Partida>> gerarPartidas16Avos(
+    List<Partida> partidasGrupos,
+  ) async {
     final selecoesTabela = <String, SelecaoTabelaGrupo>{};
 
     for (Partida partida in partidasGrupos) {
@@ -94,7 +97,7 @@ class EliminatoriasService {
 
     tabelasGrupo['Terceiro lugar'] = tabelaTerceiroLugar;
 
-    tabelasGrupo.values.forEach(print);
+    //tabelasGrupo.values.forEach(print);
 
     final terceirosLugares = await getListaTerceiros(tabelaTerceiroLugar);
 
@@ -111,42 +114,174 @@ class EliminatoriasService {
     final k = tabelasGrupo['K']!;
     final l = tabelasGrupo['L']!;
 
-    final trigramas16Avos = [
+    final selecoes16Avos = [
       e.primeiro, // 1E
       terceirosLugares.elementAt(0), // T1
+
       i.primeiro, // 1I
       terceirosLugares.elementAt(1), // T2
+
       a.segundo, // 2A
       b.segundo, // 2B
+
       f.primeiro, // 1F
       c.segundo, // 2C
+
       k.segundo, // 2K
       l.segundo, // 2L
+
       h.primeiro, // 1H
       j.segundo, // 2J
+
       d.primeiro, // 1D
       terceirosLugares.elementAt(2), // T3
+
       g.primeiro, // 1G
       terceirosLugares.elementAt(3), // T4
+
       c.primeiro, // 1C
       f.segundo, // 2F
+
       e.segundo, // 2E
       i.segundo, // 2I
+
       a.primeiro, // 1A
       terceirosLugares.elementAt(4), // T5
+
       l.primeiro, // 1L
       terceirosLugares.elementAt(5), // T6
+
       j.primeiro, // 1J
       h.segundo, // 2H
+
       d.segundo, // 2D
       g.segundo, // 2G
+
       b.primeiro, // 1B
       terceirosLugares.elementAt(6), // T7
+
       k.primeiro, // 1K
       terceirosLugares.elementAt(7), // T8
     ];
 
-    return [];
+    //print(selecoes16Avos);
+
+    return [
+      Partida(
+        numero: 73,
+        dataHora: DateTime.parse('2026-06-28T12:00:00-03:00'),
+        local: 'Los Angeles, nos EUA',
+        selecao1: DadosSelecaoPartida.fromSelecao(a.segundo),
+        selecao2: DadosSelecaoPartida.fromSelecao(b.segundo),
+      ),
+      Partida(
+        numero: 74,
+        dataHora: DateTime.parse('2026-06-29T12:00:00-03:00'),
+        local: 'Boston, nos EUA',
+        selecao1: DadosSelecaoPartida.fromSelecao(e.primeiro),
+        selecao2: DadosSelecaoPartida.fromSelecao(
+          terceirosLugares.elementAt(0),
+        ),
+      ),
+      Partida(
+        numero: 75,
+        dataHora: DateTime.parse('2026-06-29T12:00:00-03:00'),
+        local: 'Monterrey, no México',
+        selecao1: DadosSelecaoPartida.fromSelecao(f.primeiro),
+        selecao2: DadosSelecaoPartida.fromSelecao(c.segundo),
+      ),
+      Partida(
+        numero: 76,
+        dataHora: DateTime.parse('2026-06-29T12:00:00-03:00'),
+        local: 'Houston, nos EUA',
+        selecao1: DadosSelecaoPartida.fromSelecao(c.primeiro),
+        selecao2: DadosSelecaoPartida.fromSelecao(f.segundo),
+      ),
+      Partida(
+        numero: 77,
+        dataHora: DateTime.parse('2026-06-30T12:00:00-03:00'),
+        local: 'Nova York/Nova Jersey, nos EUA',
+        selecao1: DadosSelecaoPartida.fromSelecao(i.primeiro),
+        selecao2: DadosSelecaoPartida.fromSelecao(terceirosLugares.elementAt(1)),
+      ),
+      Partida(
+        numero: 78,
+        dataHora: DateTime.parse('2026-06-30T12:00:00-03:00'),
+        local: 'Dallas, nos EUA',
+        selecao1: DadosSelecaoPartida.fromSelecao(e.segundo),
+        selecao2: DadosSelecaoPartida.fromSelecao(i.segundo),
+      ),
+      Partida(
+        numero: 79,
+        dataHora: DateTime.parse('2026-06-30T12:00:00-03:00'),
+        local: 'Cidade do México, no México',
+        selecao1: DadosSelecaoPartida.fromSelecao(a.primeiro),
+        selecao2: DadosSelecaoPartida.fromSelecao(terceirosLugares.elementAt(4)),
+      ),
+      Partida(
+        numero: 80,
+        dataHora: DateTime.parse('2026-07-01T12:00:00-03:00'),
+        local: 'Atlanta, nos EUA',
+        selecao1: DadosSelecaoPartida.fromSelecao(l.primeiro),
+        selecao2: DadosSelecaoPartida.fromSelecao(terceirosLugares.elementAt(5)),
+      ),
+      Partida(
+        numero: 81,
+        dataHora: DateTime.parse('2026-07-01T12:00:00-03:00'),
+        local: 'Santa Clara, nos EUA',
+        selecao1: DadosSelecaoPartida.fromSelecao(d.primeiro),
+        selecao2: DadosSelecaoPartida.fromSelecao(terceirosLugares.elementAt(2)),
+      ),
+      Partida(
+        numero: 82,
+        dataHora: DateTime.parse('2026-07-01T12:00:00-03:00'),
+        local: 'Seattle, nos EUA',
+        selecao1: DadosSelecaoPartida.fromSelecao(g.primeiro),
+        selecao2: DadosSelecaoPartida.fromSelecao(terceirosLugares.elementAt(3)),
+      ),
+      Partida(
+        numero: 83,
+        dataHora: DateTime.parse('2026-07-02T12:00:00-03:00'),
+        local: 'Toronto, no Canadá',
+        selecao1: DadosSelecaoPartida.fromSelecao(k.segundo),
+        selecao2: DadosSelecaoPartida.fromSelecao(l.segundo),
+      ),
+      Partida(
+        numero: 84,
+        dataHora: DateTime.parse('2026-07-02T12:00:00-03:00'),
+        local: 'Los Angeles, nos EUA',
+        selecao1: DadosSelecaoPartida.fromSelecao(h.primeiro),
+        selecao2: DadosSelecaoPartida.fromSelecao(j.segundo),
+      ),
+      Partida(
+        numero: 85,
+        dataHora: DateTime.parse('2026-07-02T12:00:00-03:00'),
+        local: 'Vancouver, no Canadá',
+        selecao1: DadosSelecaoPartida.fromSelecao(b.primeiro),
+        selecao2: DadosSelecaoPartida.fromSelecao(terceirosLugares.elementAt(6)),
+      ),
+      Partida(
+        numero: 86,
+        dataHora: DateTime.parse('2026-07-03T12:00:00-03:00'),
+        local: 'Miami, nos EUA',
+        selecao1: DadosSelecaoPartida.fromSelecao(j.primeiro),
+        selecao2: DadosSelecaoPartida.fromSelecao(h.segundo),
+      ),
+      Partida(
+        numero: 87,
+        dataHora: DateTime.parse('2026-07-03T12:00:00-03:00'),
+        local: 'Kansas City, nos EUA',
+        selecao1: DadosSelecaoPartida.fromSelecao(k.primeiro),
+        selecao2: DadosSelecaoPartida.fromSelecao(terceirosLugares.elementAt(7)),
+      ),
+      Partida(
+        numero: 88,
+        dataHora: DateTime.parse('2026-07-03T12:00:00-03:00'),
+        local: 'Dallas, nos EUA',
+        selecao1: DadosSelecaoPartida.fromSelecao(d.segundo),
+        selecao2: DadosSelecaoPartida.fromSelecao(g.segundo),
+      ),
+    ];
   }
 
   Future<List<SelecaoTabelaGrupo>> getListaTerceiros(
