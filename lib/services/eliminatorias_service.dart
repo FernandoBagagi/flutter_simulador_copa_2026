@@ -3,10 +3,9 @@ import 'package:flutter_simulador_copa_2026/services/selecao_tabela_grupo.dart';
 import 'package:flutter_simulador_copa_2026/services/tabela_grupo.dart';
 
 class EliminatoriasService {
-
   List<Partida> gerarPartidas16Avos(List<Partida> partidasGrupos) {
     final selecoesTabela = <String, SelecaoTabelaGrupo>{};
-    
+
     for (Partida partida in partidasGrupos) {
       final selecao1 = selecoesTabela.putIfAbsent(
         partida.selecao1.trigrama,
@@ -91,6 +90,56 @@ class EliminatoriasService {
     tabelasGrupo['Terceiro lugar'] = tabelaTerceiroLugar;
 
     tabelasGrupo.values.forEach(print);
+
+    final terceirosLugares = [];
+
+    final a = tabelasGrupo['A']!;
+    final b = tabelasGrupo['B']!;
+    final c = tabelasGrupo['C']!;
+    final d = tabelasGrupo['D']!;
+    final e = tabelasGrupo['E']!;
+    final f = tabelasGrupo['F']!;
+    final g = tabelasGrupo['G']!;
+    final h = tabelasGrupo['H']!;
+    final i = tabelasGrupo['I']!;
+    final j = tabelasGrupo['J']!;
+    final k = tabelasGrupo['K']!;
+    final l = tabelasGrupo['L']!;
+
+    final trigramas16Avos = [
+      e.primeiro, // 1E
+      terceirosLugares.elementAt(0), // T1
+      i.primeiro, // 1I
+      terceirosLugares.elementAt(1), // T2
+      a.segundo, // 2A
+      b.segundo, // 2B
+      f.primeiro, // 1F
+      c.segundo, // 2C
+      k.segundo, // 2K
+      l.segundo, // 2L
+      h.primeiro, // 1H
+      j.segundo, // 2J
+      d.primeiro, // 1D
+      terceirosLugares.elementAt(2), // T3
+      g.primeiro, // 1G
+      terceirosLugares.elementAt(3), // T4
+      c.primeiro, // 1C
+      f.segundo, // 2F
+      e.segundo, // 2E
+      i.segundo, // 2I
+      a.primeiro, // 1A
+      terceirosLugares.elementAt(4), // T5
+      l.primeiro, // 1L
+      terceirosLugares.elementAt(5), // T6
+      j.primeiro, // 1J
+      h.segundo, // 2H
+      d.segundo, // 2D
+      g.segundo, // 2G
+      b.primeiro, // 1B
+      terceirosLugares.elementAt(6), // T7
+      k.primeiro, // 1K
+      terceirosLugares.elementAt(7), // T8
+    ];
 
     return [];
   }
