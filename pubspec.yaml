@@ -65,6 +65,7 @@ flutter:
     - assets/selecoes.csv
     - assets/selecoes.json
     - assets/partidas-grupos.json
+    - assets/combinacoes-melhores-terceiros.csv
     - assets/bandeiras/
   #   - images/a_dot_ham.jpeg
 
