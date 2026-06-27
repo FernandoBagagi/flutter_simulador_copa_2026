@@ -57,8 +57,8 @@ class _PartidasScreenState extends State<PartidasScreen> {
             ),
           ),
           ElevatedButton(
-            onPressed: () {
-              _viewModel.gerarProximaRodada();
+            onPressed: () async {
+              await _viewModel.gerarProximaRodada();
             },
             child: const Text('Gerar próxima rodada'),
           ),

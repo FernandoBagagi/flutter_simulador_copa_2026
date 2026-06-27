@@ -4,7 +4,6 @@ import 'package:flutter_simulador_copa_2026/services/selecao_tabela_grupo.dart';
 import 'package:flutter_simulador_copa_2026/services/tabela_grupo.dart';
 
 class EliminatoriasService {
-
   static final grupos = {
     'A': ['MEX', 'RSA', 'KOR', 'CZE'],
     'B': ['SUI', 'CAN', 'BIH', 'QAT'],
@@ -20,11 +19,11 @@ class EliminatoriasService {
     'L': ['ENG', 'GHA', 'CRO', 'PAN'],
   };
 
-  final CombinacoesMelhoresTerceirosRepository combinacoesMelhoresTerceirosRepository;
+  final CombinacoesMelhoresTerceirosRepository combinacoesRepository;
 
-  EliminatoriasService(this.combinacoesMelhoresTerceirosRepository);
+  EliminatoriasService(this.combinacoesRepository);
 
-  List<Partida> gerarPartidas16Avos(List<Partida> partidasGrupos) {
+  Future<List<Partida>> gerarPartidas16Avos(List<Partida> partidasGrupos) async {
     final selecoesTabela = <String, SelecaoTabelaGrupo>{};
 
     for (Partida partida in partidasGrupos) {
@@ -97,7 +96,7 @@ class EliminatoriasService {
 
     tabelasGrupo.values.forEach(print);
 
-    final terceirosLugares = getListaTerceiros(tabelaTerceiroLugar);
+    final terceirosLugares = await getListaTerceiros(tabelaTerceiroLugar);
 
     final a = tabelasGrupo['A']!;
     final b = tabelasGrupo['B']!;
@@ -150,10 +149,13 @@ class EliminatoriasService {
     return [];
   }
 
-  List<SelecaoTabelaGrupo> getListaTerceiros(TabelaGrupo tabelaTerceiroLugar) {
+  Future<List<SelecaoTabelaGrupo>> getListaTerceiros(
+    TabelaGrupo tabelaTerceiroLugar,
+  ) async {
     final mapGrupoSelecao = gerarMapGrupoSelecao(tabelaTerceiroLugar);
     final chave = gerarChaveTerceirosPossiveis(mapGrupoSelecao);
-    return getListaFromCombinacao(mapGrupoSelecao, chave);
+    final ordemTerceiros = await combinacoesRepository.getCombinacao(chave);
+    return [for (final letra in ordemTerceiros) mapGrupoSelecao[letra]!];
   }
 
   Map<String, SelecaoTabelaGrupo> gerarMapGrupoSelecao(
@@ -187,14 +189,4 @@ class EliminatoriasService {
     letrasGrupoTerceiro.sort();
     return letrasGrupoTerceiro.reduce((s1, s2) => s1 + s2);
   }
-
-  List<SelecaoTabelaGrupo> getListaFromCombinacao(
-    Map<String, SelecaoTabelaGrupo> map,
-    String chave,
-  ) {
-    return [];
-  }
-
-  
-
 }
