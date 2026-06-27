@@ -14,9 +14,9 @@ class PartidasViewModel extends ChangeNotifier {
 
   PartidasViewModel(
     this._selecaoRepository,
-    this._partidaRepository, {
-    EliminatoriasService? eliminatoriasService,
-  }) : _eliminatoriasService = eliminatoriasService ?? EliminatoriasService();
+    this._partidaRepository,
+    this._eliminatoriasService,
+  );
 
   PartidasViewModelStatus _status = PartidasViewModelStatus.carregando;
   PartidasViewModelStatus get status => _status;
