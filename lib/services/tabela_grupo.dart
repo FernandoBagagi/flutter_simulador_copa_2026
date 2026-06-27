@@ -14,6 +14,7 @@ class TabelaGrupo {
   SelecaoTabelaGrupo get primeiro => _selecoes.elementAt(0);
   SelecaoTabelaGrupo get segundo => _selecoes.elementAt(1);
   SelecaoTabelaGrupo get terceiro => _selecoes.elementAt(2);
+  List<SelecaoTabelaGrupo> get oitoMelhores => _selecoes.sublist(0, 8);
 
   @override
   String toString() {
