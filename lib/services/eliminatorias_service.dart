@@ -97,7 +97,7 @@ class EliminatoriasService {
 
     tabelasGrupo['Terceiro lugar'] = tabelaTerceiroLugar;
 
-    //tabelasGrupo.values.forEach(print);
+    tabelasGrupo.values.forEach(print);
 
     final terceirosLugares = await getListaTerceiros(tabelaTerceiroLugar);
 
@@ -180,7 +180,7 @@ class EliminatoriasService {
         local: 'Boston, nos EUA',
         selecao1: DadosSelecaoPartida.fromSelecao(e.primeiro),
         selecao2: DadosSelecaoPartida.fromSelecao(
-          terceirosLugares.elementAt(0),
+          terceirosLugares.elementAt(3),
         ),
       ),
       Partida(
@@ -202,7 +202,7 @@ class EliminatoriasService {
         dataHora: DateTime.parse('2026-06-30T12:00:00-03:00'),
         local: 'Nova York/Nova Jersey, nos EUA',
         selecao1: DadosSelecaoPartida.fromSelecao(i.primeiro),
-        selecao2: DadosSelecaoPartida.fromSelecao(terceirosLugares.elementAt(1)),
+        selecao2: DadosSelecaoPartida.fromSelecao(terceirosLugares.elementAt(5)),
       ),
       Partida(
         numero: 78,
@@ -216,14 +216,14 @@ class EliminatoriasService {
         dataHora: DateTime.parse('2026-06-30T12:00:00-03:00'),
         local: 'Cidade do México, no México',
         selecao1: DadosSelecaoPartida.fromSelecao(a.primeiro),
-        selecao2: DadosSelecaoPartida.fromSelecao(terceirosLugares.elementAt(4)),
+        selecao2: DadosSelecaoPartida.fromSelecao(terceirosLugares.elementAt(6)),
       ),
       Partida(
         numero: 80,
         dataHora: DateTime.parse('2026-07-01T12:00:00-03:00'),
         local: 'Atlanta, nos EUA',
         selecao1: DadosSelecaoPartida.fromSelecao(l.primeiro),
-        selecao2: DadosSelecaoPartida.fromSelecao(terceirosLugares.elementAt(5)),
+        selecao2: DadosSelecaoPartida.fromSelecao(terceirosLugares.elementAt(7)),
       ),
       Partida(
         numero: 81,
@@ -237,7 +237,7 @@ class EliminatoriasService {
         dataHora: DateTime.parse('2026-07-01T12:00:00-03:00'),
         local: 'Seattle, nos EUA',
         selecao1: DadosSelecaoPartida.fromSelecao(g.primeiro),
-        selecao2: DadosSelecaoPartida.fromSelecao(terceirosLugares.elementAt(3)),
+        selecao2: DadosSelecaoPartida.fromSelecao(terceirosLugares.elementAt(4)),
       ),
       Partida(
         numero: 83,
@@ -258,7 +258,7 @@ class EliminatoriasService {
         dataHora: DateTime.parse('2026-07-02T12:00:00-03:00'),
         local: 'Vancouver, no Canadá',
         selecao1: DadosSelecaoPartida.fromSelecao(b.primeiro),
-        selecao2: DadosSelecaoPartida.fromSelecao(terceirosLugares.elementAt(6)),
+        selecao2: DadosSelecaoPartida.fromSelecao(terceirosLugares.elementAt(1)),
       ),
       Partida(
         numero: 86,
@@ -272,7 +272,7 @@ class EliminatoriasService {
         dataHora: DateTime.parse('2026-07-03T12:00:00-03:00'),
         local: 'Kansas City, nos EUA',
         selecao1: DadosSelecaoPartida.fromSelecao(k.primeiro),
-        selecao2: DadosSelecaoPartida.fromSelecao(terceirosLugares.elementAt(7)),
+        selecao2: DadosSelecaoPartida.fromSelecao(terceirosLugares.elementAt(0)),
       ),
       Partida(
         numero: 88,
