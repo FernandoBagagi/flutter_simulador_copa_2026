@@ -3,21 +3,29 @@ class SelecaoTabelaGrupo implements Comparable<SelecaoTabelaGrupo> {
   static final _pontosEmpate = 1;
   static final _pontosDerrota = 0;
 
+  static final int _valorCartaoAmarelo = -1;
+  static final int _valorCartaoVermelho = -4;
+
   final String trigrama;
+  final int rankFifa;
   int _partidasDisputadas; // J
   int _vitorias; // C
   int _empates; // E
   int _derrotas; // D
   int _golsMarcados; // M
   int _golsSofridos; // S
+  int _cartoesAmarelo;
+  int _cartoesVermelho;
 
-  SelecaoTabelaGrupo(this.trigrama)
+  SelecaoTabelaGrupo({required this.trigrama, required this.rankFifa})
     : _partidasDisputadas = 0,
       _vitorias = 0,
       _empates = 0,
       _derrotas = 0,
       _golsMarcados = 0,
-      _golsSofridos = 0;
+      _golsSofridos = 0,
+      _cartoesAmarelo = 0,
+      _cartoesVermelho = 0;
 
   int get partidasDisputadas => _partidasDisputadas;
   void addPartidaDisputada() {
@@ -57,14 +65,17 @@ class SelecaoTabelaGrupo implements Comparable<SelecaoTabelaGrupo> {
         derrotas * _pontosDerrota;
   }
 
-  int get fairPlay {
-    //TODO:
-    throw UnimplementedError();
+  void addCartoesAmarelo(int cartoes) {
+    _cartoesAmarelo += cartoes;
   }
 
-  int get rankFifa {
-    //TODO:
-    throw UnimplementedError();
+  void addCartoesVermelho(int cartoes) {
+    _cartoesVermelho += cartoes;
+  }
+
+  int get fairPlay {
+    return _cartoesAmarelo * _valorCartaoAmarelo +
+        _cartoesVermelho * _valorCartaoVermelho;
   }
 
   // Fonte: https://ge.globo.com/futebol/copa-do-mundo/noticia/2026/06/24/criterios-de-desempate-na-copa-do-mundo-entenda-as-regras-para-a-ultima-rodada-da-fase-de-grupos.ghtml
@@ -80,8 +91,7 @@ class SelecaoTabelaGrupo implements Comparable<SelecaoTabelaGrupo> {
       return other.golsMarcados.compareTo(golsMarcados);
     }
     if (fairPlay != other.fairPlay) {
-      //TODO: Verificar se não é o contrário
-      return fairPlay.compareTo(other.fairPlay);
+      return other.fairPlay.compareTo(fairPlay);
     }
     return rankFifa.compareTo(other.rankFifa);
   }
