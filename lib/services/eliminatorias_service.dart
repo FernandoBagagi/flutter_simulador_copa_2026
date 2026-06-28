@@ -32,12 +32,22 @@ class EliminatoriasService {
     for (Partida partida in partidasGrupos) {
       final selecao1 = selecoesTabela.putIfAbsent(
         partida.selecao1.trigrama,
-        () => SelecaoTabelaGrupo(partida.selecao1.trigrama),
+        () {
+          return SelecaoTabelaGrupo(
+            trigrama: partida.selecao1.trigrama,
+            rankFifa: partida.selecao1.rankFifa,
+          );
+        },
       );
 
       final selecao2 = selecoesTabela.putIfAbsent(
         partida.selecao2.trigrama,
-        () => SelecaoTabelaGrupo(partida.selecao2.trigrama),
+        () {
+          return SelecaoTabelaGrupo(
+            trigrama: partida.selecao2.trigrama,
+            rankFifa: partida.selecao2.rankFifa,
+          );
+        },
       );
 
       final golsSelecao1 = partida.selecao1.golsMarcados;
@@ -61,10 +71,14 @@ class EliminatoriasService {
       selecao1.addPartidaDisputada();
       selecao1.addGolsMarcados(golsSelecao1);
       selecao1.addGolsSofridos(golsSelecao2);
+      selecao1.addCartoesAmarelo(partida.selecao1.cartoes.amarelo);
+      selecao1.addCartoesVermelho(partida.selecao1.cartoes.vermelhoDireto);
 
       selecao2.addPartidaDisputada();
       selecao2.addGolsMarcados(golsSelecao2);
       selecao2.addGolsSofridos(golsSelecao1);
+      selecao2.addCartoesAmarelo(partida.selecao2.cartoes.amarelo);
+      selecao2.addCartoesVermelho(partida.selecao2.cartoes.vermelhoDireto);
     }
 
     final tabelasGrupo = {
@@ -97,7 +111,7 @@ class EliminatoriasService {
 
     tabelasGrupo['Terceiro lugar'] = tabelaTerceiroLugar;
 
-    tabelasGrupo.values.forEach(print);
+    //tabelasGrupo.values.forEach(print);
 
     final terceirosLugares = await getListaTerceiros(tabelaTerceiroLugar);
 
@@ -116,10 +130,10 @@ class EliminatoriasService {
 
     final selecoes16Avos = [
       e.primeiro, // 1E
-      terceirosLugares.elementAt(0), // T1
+      terceirosLugares.elementAt(3), // T4
 
       i.primeiro, // 1I
-      terceirosLugares.elementAt(1), // T2
+      terceirosLugares.elementAt(5), // T6
 
       a.segundo, // 2A
       b.segundo, // 2B
@@ -137,7 +151,7 @@ class EliminatoriasService {
       terceirosLugares.elementAt(2), // T3
 
       g.primeiro, // 1G
-      terceirosLugares.elementAt(3), // T4
+      terceirosLugares.elementAt(4), // T5
 
       c.primeiro, // 1C
       f.segundo, // 2F
@@ -146,10 +160,10 @@ class EliminatoriasService {
       i.segundo, // 2I
 
       a.primeiro, // 1A
-      terceirosLugares.elementAt(4), // T5
+      terceirosLugares.elementAt(0), // T1
 
       l.primeiro, // 1L
-      terceirosLugares.elementAt(5), // T6
+      terceirosLugares.elementAt(7), // T8
 
       j.primeiro, // 1J
       h.segundo, // 2H
@@ -158,10 +172,10 @@ class EliminatoriasService {
       g.segundo, // 2G
 
       b.primeiro, // 1B
-      terceirosLugares.elementAt(6), // T7
+      terceirosLugares.elementAt(1), // T2
 
       k.primeiro, // 1K
-      terceirosLugares.elementAt(7), // T8
+      terceirosLugares.elementAt(6), // T7
     ];
 
     //print(selecoes16Avos);
@@ -202,7 +216,9 @@ class EliminatoriasService {
         dataHora: DateTime.parse('2026-06-30T12:00:00-03:00'),
         local: 'Nova York/Nova Jersey, nos EUA',
         selecao1: DadosSelecaoPartida.fromSelecao(i.primeiro),
-        selecao2: DadosSelecaoPartida.fromSelecao(terceirosLugares.elementAt(5)),
+        selecao2: DadosSelecaoPartida.fromSelecao(
+          terceirosLugares.elementAt(5),
+        ),
       ),
       Partida(
         numero: 78,
@@ -216,28 +232,36 @@ class EliminatoriasService {
         dataHora: DateTime.parse('2026-06-30T12:00:00-03:00'),
         local: 'Cidade do México, no México',
         selecao1: DadosSelecaoPartida.fromSelecao(a.primeiro),
-        selecao2: DadosSelecaoPartida.fromSelecao(terceirosLugares.elementAt(6)),
+        selecao2: DadosSelecaoPartida.fromSelecao(
+          terceirosLugares.elementAt(0),
+        ),
       ),
       Partida(
         numero: 80,
         dataHora: DateTime.parse('2026-07-01T12:00:00-03:00'),
         local: 'Atlanta, nos EUA',
         selecao1: DadosSelecaoPartida.fromSelecao(l.primeiro),
-        selecao2: DadosSelecaoPartida.fromSelecao(terceirosLugares.elementAt(7)),
+        selecao2: DadosSelecaoPartida.fromSelecao(
+          terceirosLugares.elementAt(7),
+        ),
       ),
       Partida(
         numero: 81,
         dataHora: DateTime.parse('2026-07-01T12:00:00-03:00'),
         local: 'Santa Clara, nos EUA',
         selecao1: DadosSelecaoPartida.fromSelecao(d.primeiro),
-        selecao2: DadosSelecaoPartida.fromSelecao(terceirosLugares.elementAt(2)),
+        selecao2: DadosSelecaoPartida.fromSelecao(
+          terceirosLugares.elementAt(2),
+        ),
       ),
       Partida(
         numero: 82,
         dataHora: DateTime.parse('2026-07-01T12:00:00-03:00'),
         local: 'Seattle, nos EUA',
         selecao1: DadosSelecaoPartida.fromSelecao(g.primeiro),
-        selecao2: DadosSelecaoPartida.fromSelecao(terceirosLugares.elementAt(4)),
+        selecao2: DadosSelecaoPartida.fromSelecao(
+          terceirosLugares.elementAt(4),
+        ),
       ),
       Partida(
         numero: 83,
@@ -258,7 +282,9 @@ class EliminatoriasService {
         dataHora: DateTime.parse('2026-07-02T12:00:00-03:00'),
         local: 'Vancouver, no Canadá',
         selecao1: DadosSelecaoPartida.fromSelecao(b.primeiro),
-        selecao2: DadosSelecaoPartida.fromSelecao(terceirosLugares.elementAt(1)),
+        selecao2: DadosSelecaoPartida.fromSelecao(
+          terceirosLugares.elementAt(1),
+        ),
       ),
       Partida(
         numero: 86,
@@ -272,7 +298,9 @@ class EliminatoriasService {
         dataHora: DateTime.parse('2026-07-03T12:00:00-03:00'),
         local: 'Kansas City, nos EUA',
         selecao1: DadosSelecaoPartida.fromSelecao(k.primeiro),
-        selecao2: DadosSelecaoPartida.fromSelecao(terceirosLugares.elementAt(0)),
+        selecao2: DadosSelecaoPartida.fromSelecao(
+          terceirosLugares.elementAt(6),
+        ),
       ),
       Partida(
         numero: 88,
