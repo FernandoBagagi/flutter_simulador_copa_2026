@@ -7,12 +7,18 @@
             "selecao1": {
                 "trigrama": "MEX",
                 "golsMarcados": 2,
-                "cartoes": {}
+                "cartoes": {
+                    "amarelo": 1,
+                    "vermelhoDireto": 1
+                }
             },
             "selecao2": {
                 "trigrama": "RSA",
                 "golsMarcados": 0,
-                "cartoes": {}
+                "cartoes": {
+                    "amarelo": 2,
+                    "vermelhoDireto": 2
+                }
             }
         },
         {
@@ -157,12 +163,16 @@
             "selecao1": {
                 "trigrama": "CIV",
                 "golsMarcados": 1,
-                "cartoes": {}
+                "cartoes": {
+                    "amarelo": 3
+                }
             },
             "selecao2": {
                 "trigrama": "ECU",
                 "golsMarcados": 0,
-                "cartoes": {}
+                "cartoes": {
+                    "amarelo": 1
+                }
             }
         },
         {
@@ -337,12 +347,16 @@
             "selecao1": {
                 "trigrama": "GHA",
                 "golsMarcados": 1,
-                "cartoes": {}
+                "cartoes": {
+                    "amarelo": 1
+                }
             },
             "selecao2": {
                 "trigrama": "PAN",
                 "golsMarcados": 0,
-                "cartoes": {}
+                "cartoes": {
+                    "amarelo": 2
+                }
             }
         },
         {
@@ -517,12 +531,16 @@
             "selecao1": {
                 "trigrama": "ECU",
                 "golsMarcados": 0,
-                "cartoes": {}
+                "cartoes": {
+                    "amarelo": 1
+                }
             },
             "selecao2": {
                 "trigrama": "CUW",
                 "golsMarcados": 0,
-                "cartoes": {}
+                "cartoes": {
+                    "amarelo": 5
+                }
             }
         },
         {
@@ -682,12 +700,16 @@
             "selecao1": {
                 "trigrama": "ENG",
                 "golsMarcados": 0,
-                "cartoes": {}
+                "cartoes": {
+                    "amarelo": 1
+                }
             },
             "selecao2": {
                 "trigrama": "GHA",
                 "golsMarcados": 0,
-                "cartoes": {}
+                "cartoes": {
+                    "amarelo": 1
+                }
             }
         },
         {
@@ -817,12 +839,16 @@
             "selecao1": {
                 "trigrama": "ECU",
                 "golsMarcados": 2,
-                "cartoes": {}
+                "cartoes": {
+                    "amarelo": 3
+                }
             },
             "selecao2": {
                 "trigrama": "GER",
                 "golsMarcados": 1,
-                "cartoes": {}
+                "cartoes": {
+                    "amarelo": 1
+                }
             }
         },
         {
@@ -1012,12 +1038,16 @@
             "selecao1": {
                 "trigrama": "CRO",
                 "golsMarcados": 2,
-                "cartoes": {}
+                "cartoes": {
+                    "amarelo": 1
+                }
             },
             "selecao2": {
                 "trigrama": "GHA",
                 "golsMarcados": 1,
-                "cartoes": {}
+                "cartoes": {
+                    "amarelo": 1
+                }
             }
         },
         {
